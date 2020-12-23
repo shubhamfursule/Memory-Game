@@ -2,21 +2,22 @@
 
 
 l1=[]
-x1=36
-while x1:
+l2=[]
+x1=18
+count=0
+while x1 and len(l1)!=30:
     char1=chr(randint(33,126))
     while l1.count(char1)!=2:
         l1.insert(randint(0,36),char1)
+        count+=1
     x1-=1
-print(l1)
+
+print(count)
 l2=[]
-j=36
-while j:
-    for i in range(0,6):
-        l3=[]
-        for k in range(0,6):
-            i
-            l3[k].append(l1[j])
-            j-=1
-        l2[i].append(l3)
-print(l2)
+i=0
+while i<len(l1):
+    l2.append(l1[i:i+6])
+    i+=6
+
+for k in l2:
+    print(*k)
